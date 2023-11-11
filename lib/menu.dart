@@ -1,4 +1,4 @@
-import 'package:bonfire/bonfire.dart';
+import 'package:bonfirerpg/game.dart';
 import 'package:flame_splash_screen/flame_splash_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -59,10 +59,10 @@ class _MenuState extends State<Menu> {
                     ),
                   ),
                   onPressed: () {
-                    // Navigator.push(
-                    //   context,
-                    //   MaterialPageRoute(builder: (context) => Game()),
-                    // );
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => Game()),
+                    );
                   },
                 ),
               ),
