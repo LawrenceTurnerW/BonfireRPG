@@ -68,7 +68,19 @@ flutter:
   assets:
     - assets/
     - assets/images/
+    #- assets/images/emote/
+    #- assets/images/npc/
+    #- assets/images/enemy/
+    #- assets/images/enemy/goblin/
+    #- assets/images/enemy/imp/
+    #- assets/images/enemy/mini_boss/
+    #- assets/images/enemy/boss/
+    - assets/images/player/
+    - assets/images/items/
     - assets/images/tiled/
+    #- assets/audio/
+    #- resources/lang/en.json
+    #- resources/lang/pt.json
 
 
   # An image asset can refer to one or more resolution-specific "variants", see
