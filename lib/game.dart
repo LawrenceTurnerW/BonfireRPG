@@ -1,5 +1,8 @@
 import 'package:bonfire/bonfire.dart';
+import 'package:bonfirerpg/main.dart';
 import 'package:flutter/material.dart';
+
+import 'player/knight.dart';
 
 class Game extends StatefulWidget {
   static bool useJoystick = true;
@@ -22,8 +25,6 @@ class _GameState extends State<Game> {
 
   @override
   Widget build(BuildContext context) {
-    double tileSize = 128;
-
     var joystick = Joystick(
       directional: JoystickDirectional(
         spriteBackgroundDirectional: Sprite.load('joystick_background.png'),
@@ -38,6 +39,9 @@ class _GameState extends State<Game> {
       color: Colors.transparent,
       child: BonfireWidget(
         joystick: joystick,
+        player: Knight(
+          Vector2(2 * tileSize, 3 * tileSize),
+        ),
         map: WorldMapByTiled(
           'tiled/map.json',
           forceTileSize: Vector2(tileSize, tileSize),

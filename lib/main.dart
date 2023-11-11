@@ -4,7 +4,7 @@ import 'package:bonfire/bonfire.dart';
 import 'package:flutter/foundation.dart';
 //import 'package:flutter/services.dart';
 
-double tileSize = 128;
+double tileSize = 32;
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   if (!kIsWeb) {
