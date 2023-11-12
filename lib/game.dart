@@ -67,7 +67,7 @@ class _GameState extends State<Game> {
         backgroundColor: Colors.grey[900]!,
         cameraConfig: CameraConfig(
           speed: 3,
-          zoom: getZoomFromMaxVisibleTile(context, tileSize, 18),
+          zoom: getZoomFromMaxVisibleTile(context, tileSize * 1.5, 32),
         ),
         progress: Container(
           color: Colors.black,
