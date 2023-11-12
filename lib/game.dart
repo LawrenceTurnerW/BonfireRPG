@@ -2,6 +2,8 @@ import 'package:bonfire/bonfire.dart';
 import 'package:bonfirerpg/main.dart';
 import 'package:flutter/material.dart';
 
+import 'decoration/potion_life.dart';
+import 'decoration/torch.dart';
 import 'interface/knight_interface.dart';
 import 'player/knight.dart';
 
@@ -61,6 +63,11 @@ class _GameState extends State<Game> {
         map: WorldMapByTiled(
           'tiled/map.json',
           forceTileSize: Vector2(tileSize, tileSize),
+          objectsBuilder: {
+            'torch': (p) => Torch(p.position),
+            'potion': (p) => PotionLife(p.position, 30),
+            'torch_empty': (p) => Torch(p.position, empty: true),
+          },
         ),
         interface: KnightInterface(),
         lightingColorGame: Colors.black.withOpacity(0.6),
