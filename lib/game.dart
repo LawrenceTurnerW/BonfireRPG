@@ -2,6 +2,7 @@ import 'package:bonfire/bonfire.dart';
 import 'package:bonfirerpg/main.dart';
 import 'package:flutter/material.dart';
 
+import 'interface/knight_interface.dart';
 import 'player/knight.dart';
 
 class Game extends StatefulWidget {
@@ -32,7 +33,22 @@ class _GameState extends State<Game> {
         size: 150,
         isFixed: false,
       ),
-      actions: [],
+      actions: [
+        JoystickAction(
+          actionId: 0,
+          sprite: Sprite.load('joystick_atack.png'),
+          spritePressed: Sprite.load('joystick_atack_selected.png'),
+          size: 80,
+          margin: const EdgeInsets.only(bottom: 50, right: 50),
+        ),
+        JoystickAction(
+          actionId: 1,
+          sprite: Sprite.load('joystick_atack_range.png'),
+          spritePressed: Sprite.load('joystick_atack_range_selected.png'),
+          size: 50,
+          margin: const EdgeInsets.only(bottom: 50, right: 160),
+        )
+      ],
     );
 
     return Material(
@@ -46,6 +62,7 @@ class _GameState extends State<Game> {
           'tiled/map.json',
           forceTileSize: Vector2(tileSize, tileSize),
         ),
+        interface: KnightInterface(),
         lightingColorGame: Colors.black.withOpacity(0.6),
         backgroundColor: Colors.grey[900]!,
         cameraConfig: CameraConfig(
